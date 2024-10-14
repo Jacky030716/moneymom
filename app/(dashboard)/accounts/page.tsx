@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardTitle
 } from "@/components/ui/card"
-import { Car, Loader2, Plus } from "lucide-react"
+import { Loader2, Plus } from "lucide-react"
 
 import { columns } from "./columns"
 import { Skeleton } from "@/components/ui/skeleton"
@@ -63,7 +63,6 @@ const AccountPage = () => {
           <DataTable 
             columns={columns} 
             data={accounts}
-            filterKey="name"
             onDelete={(row) => {
               const ids = row.map((r) => r.original.id)
               deleteAccounts.mutate({ ids })
